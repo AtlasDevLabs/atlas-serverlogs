@@ -5,5 +5,7 @@ Simple Server Logs for your FiveM Server!
 - Add Export so you can do your own logs!
 - Add More Player Killed Events (Weapons Etc)
 
+# Need Support?
+
 > [!TIP]
-> Need Support? Join our Discord discord.gg/atlaslabs
+> Join our Discord discord.gg/atlaslabs
