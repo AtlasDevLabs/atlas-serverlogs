@@ -6,6 +6,4 @@ Simple Server Logs for your FiveM Server!
 - Add More Player Killed Events (Weapons Etc)
 
 # Need Support?
-
-> [!TIP]
-> Join our Discord discord.gg/atlaslabs
+Join our Discord discord.gg/atlaslabs
