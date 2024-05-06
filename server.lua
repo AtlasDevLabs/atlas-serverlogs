@@ -245,3 +245,28 @@ RegisterNetEvent('vMenu:UpdateServerTime', function(result)
         return
     end
 end)
+
+RegisterNetEvent('vMenu:SendMessageToPlayer', function(target, message)
+    local sourceID = source
+    local sourceName = GetPlayerName(sourceID)
+    local targetName = GetPlayerName(target)
+    for k,v in pairs(GetPlayerIdentifiers(source)) do
+        if string.sub(v, 1, string.len("discord:")) == "discord:" then
+            discord = string.gsub(v, "discord:", "")
+        end
+    end  
+    local embedData = {
+        {
+            ["color"] = 3447003, 
+            ["title"] = "vMenu Event: Server Time",
+            ["description"] = "\n**ID**: "..sourceID.." \n**Staff**: <@"..discord.."> \n**Action**: has updated the time to \n**".. result ..":00**",
+            ["footer"] = {
+                ["text"] = "AtlasDevLabs - 2024",
+            },
+        },
+    }	
+    sendHttpRequest(webhookURL, {username = username, embeds = embedData})
+    else
+        return
+    end
+end)
